@@ -101,10 +101,11 @@ public class ConditionExample {
 			
 			System.out.print("몇월입니까? : ");
 			int month = sc.nextInt();
+			
 			System.out.print("온도는 몇도입니까? : ");
 			int temperature = sc.nextInt();
 					
-			String season;
+			String season; // 아래 조건문 수행 결과를 저장할 변수 선언
 			
 			if (month == 1 || month == 2 || month == 12) {
 				season = "겨울";
@@ -121,7 +122,6 @@ public class ConditionExample {
 					season += " 폭염 경보";
 				} else if (temperature >= 33) {
 					season += " 폭염 주의보"; 
-					
 				}
 			} else if (month >= 9 && month <= 11) {
 				season = "가을";
@@ -132,5 +132,69 @@ public class ConditionExample {
 		}
 		
 		
+		public void ex5() {
+			Scanner sc = new Scanner(System.in);
+			
+			System.out.print("나이 : ");
+			int age = sc.nextInt();
+			
+			if (age <= 13 && age >= 0) {
+				System.out.print("어린이 입니다.");
+				
+			} else if (age > 13 && age <=19 ) {
+				System.out.print("청소년 입니다.");
+			} else if (age > 19 ) {
+				System.out.print("성인 입니다.");
+			}
+		}
+		
+		public void ex6() {
+			Scanner sc = new Scanner(System.in);
+			
+			System.out.print("점수 : ");
+			int score = sc.nextInt();
+			
+			if (score < 0 || score > 100) {
+				System.out.print("잘못 입력하셨습니다");
+			} else if (score >= 90) {
+				System.out.print("A");
+			} else if (score >= 80) {
+				System.out.print("B");
+			} else if (score >= 70) {
+				System.out.print("C");
+			} else if (score >= 60) {
+				System.out.print("D");
+			} else if (score < 60) {
+				System.out.print("F");
+			}
+		}
+		
+		public void ex7() {
+			Scanner sc = new Scanner(System.in);
+			
+			System.out.print("나이 : ");
+			int age = sc.nextInt();
+			
+			System.out.print("키 : ");
+			double hight = sc.nextDouble();
+			
+			String result1;
+			
+			if (age < 0 || age > 100) {
+				result1 = "잘못 입력 하셨습니다.";
+			} else if  (age >= 12) {
+				
+				if (hight >= 140.0) {
+					result1 = "탑승 가능";
+					
+				} else if (hight < 140.0) {
+					result1 = "적정 키가 아닙니다.";
+				}
+				
+			} else if (age < 12) {
+				result1 = "적정 연령이 아닙니다.";
+			} 
+			System.out.println(result1);
+		}
 
-}
+
