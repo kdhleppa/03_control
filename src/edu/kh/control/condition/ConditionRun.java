@@ -14,7 +14,9 @@ public class ConditionRun {
 
 		//ce.ex6();
 		
-		ce.ex7();
+		//ce.ex7();
+		ce.ex8();
+		
 		
 	}
 

@@ -170,31 +170,61 @@ public class ConditionExample {
 		}
 		
 		public void ex7() {
+			
 			Scanner sc = new Scanner(System.in);
 			
 			System.out.print("나이 : ");
 			int age = sc.nextInt();
 			
 			System.out.print("키 : ");
-			double hight = sc.nextDouble();
+			double height = sc.nextDouble();
 			
-			String result1;
-			
+					
 			if (age < 0 || age > 100) {
-				result1 = "잘못 입력 하셨습니다.";
+				System.out.print("잘못 입력 하셨습니다.");
 			} else if  (age >= 12) {
 				
-				if (hight >= 140.0) {
-					result1 = "탑승 가능";
+				if (height >= 140.0) {
+					System.out.print("탑승 가능");
 					
-				} else if (hight < 140.0) {
-					result1 = "적정 키가 아닙니다.";
+				} else if (height < 140.0) {
+					System.out.print("적정 키가 아닙니다.");
+				}
+			} else if (age < 12) {
+				System.out.print("적정 연령이 아닙니다.");
+			} 
+		}
+		
+		public void ex8() {
+			
+			Scanner sc = new Scanner(System.in);
+			
+			System.out.print("나이 : ");
+			int age = sc.nextInt();
+			
+			System.out.print("키 : ");
+			double height = sc.nextDouble();
+			
+					
+			if (age < 0 || age > 100) {
+				System.out.print("나이를 잘못 입력 하셨습니다.");
+			} else if (height < 0 || height > 250.0) {
+				System.out.print("키를 잘못 입력 하셨습니다.");
+			} else if  (age >= 12) {
+				
+				if (height >= 140.0) {
+					System.out.print("탑승 가능");
+					
+				} else if (height < 140.0) {
+					System.out.print("나이는 적절하나, 키가 적절치 않음");
+				}
+			} else if (age < 12) {
+				if (height >= 140.0) {
+					System.out.print("키는 적절하나, 나이는 적절치 않음");	
+				} else if (height < 140.0) {
+					System.out.print("나이와 키 모두 적절치 않음");
 				}
 				
-			} else if (age < 12) {
-				result1 = "적정 연령이 아닙니다.";
 			} 
-			System.out.println(result1);
 		}
-
-
+	}
