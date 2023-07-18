@@ -75,7 +75,9 @@ public class ConditionPractice {
 		switch (month) {
 		case 1 : case 3 : case 5 : case 7 : case 8 : case 10 : case 12 :
 			System.out.printf("%d월은 31일까지 있습니다.", month); break;
-		case 2 : case 4 : case 6: case 9: case 11:
+		case 2 :
+			System.out.printf("%d월은 28일까지 있습니다.", month); break;
+		case 4 : case 6: case 9: case 11:
 			System.out.printf("%d월은 30일까지 있습니다.", month); break;
 		default :
 			System.out.printf("%d월은 잘못 입력된 달입니다.", month);
@@ -127,10 +129,11 @@ public class ConditionPractice {
 		System.out.print("출석 횟수 : ");
 		int chekScore = sc.nextInt();
 		
-		double midScore20 = midScore * 0.2;
+		double midScore20 = midScore * 0.2; // midScore20 *= 0.2; 로 표현 가능
 		double finalScore30 = finalScore * 0.3;
 		double studyScore30 = studyScore * 0.3;
 		double chekScore20 = (chekScore * 0.05)*0.2*100;
+		
 		
 		double scoreSum = (midScore20 + finalScore30 + studyScore30 + chekScore20);
 		
