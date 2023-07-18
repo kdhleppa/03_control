@@ -15,7 +15,12 @@ public class ConditionRun {
 		//ce.ex6();
 		
 		//ce.ex7();
-		ce.ex8();
+		//ce.ex8();
+		
+		SwitchExample se = new SwitchExample();
+		
+		se.ex2();
+		
 		
 		
 	}

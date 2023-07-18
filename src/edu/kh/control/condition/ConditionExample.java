@@ -176,24 +176,27 @@ public class ConditionExample {
 			System.out.print("나이 : ");
 			int age = sc.nextInt();
 			
-			System.out.print("키 : ");
-			double height = sc.nextDouble();
+						
+			String result;
 			
-					
 			if (age < 0 || age > 100) {
-				System.out.print("잘못 입력 하셨습니다.");
-			} else if  (age >= 12) {
+				result = "잘못 입력 하셨습니다.";
 				
-				if (height >= 140.0) {
-					System.out.print("탑승 가능");
-					
-				} else if (height < 140.0) {
-					System.out.print("적정 키가 아닙니다.");
+			} else {
+				System.out.print("키 입력 : ");
+				double height = sc.nextDouble();
+				
+				if (age < 12) {
+					result = "적정 연령이 아닙니다.";
+				} else if( height < 140.0 ) {
+					result = "적정 키가 아닙니다.";
+				} else {
+					result = "탑승가능";
 				}
-			} else if (age < 12) {
-				System.out.print("적정 연령이 아닙니다.");
 			} 
+			System.out.println(result);
 		}
+
 		
 		public void ex8() {
 			
@@ -202,29 +205,31 @@ public class ConditionExample {
 			System.out.print("나이 : ");
 			int age = sc.nextInt();
 			
-			System.out.print("키 : ");
-			double height = sc.nextDouble();
+			String result;
 			
-					
+				
 			if (age < 0 || age > 100) {
-				System.out.print("나이를 잘못 입력 하셨습니다.");
-			} else if (height < 0 || height > 250.0) {
-				System.out.print("키를 잘못 입력 하셨습니다.");
-			} else if  (age >= 12) {
+				result = "나이를 잘못 입력 하셨습니다.";
+			} else {
 				
-				if (height >= 140.0) {
-					System.out.print("탑승 가능");
-					
-				} else if (height < 140.0) {
-					System.out.print("나이는 적절하나, 키가 적절치 않음");
+				System.out.print("키 : ");
+				double height = sc.nextDouble();
+			
+				if (height < 0 || height > 250.0) {
+					result = "키를 잘못 입력 하셨습니다.";
+				} else {
+					if (age < 12 && height >= 140.0) {
+						result = "키는 적절하나, 나이가 적절치 않음";
+						
+					} else if (age >= && height < 140.0) {
+						result = "나이는 적절하나 키가 적절치 않음";
+					} else if (age < 12 && height < 140.0) {
+						result = "나이와 키 모두 적절치 않음";
+					} else {
+						result = "탑승 가능"
+					}
 				}
-			} else if (age < 12) {
-				if (height >= 140.0) {
-					System.out.print("키는 적절하나, 나이는 적절치 않음");	
-				} else if (height < 140.0) {
-					System.out.print("나이와 키 모두 적절치 않음");
-				}
-				
-			} 
+			
 		}
-	}
+}
+}
