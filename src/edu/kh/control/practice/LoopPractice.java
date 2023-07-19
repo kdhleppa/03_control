@@ -183,7 +183,7 @@ public class LoopPractice {
 			System.out.println();
 		}
 
-		for (int j = num -1; j >= 0 ; j--) {
+		for (int j = num -1; j >= 1 ; j--) {
 			
 			for (int x = j; x >= 1; x--) {
 				
@@ -201,7 +201,6 @@ public class LoopPractice {
 		
 		int num = sc.nextInt();
 		int num2 = num - 1;
-		int num3 = num * 2 - 1;
 		
 		for (int i = 1; i <= num; i++) {
 			
@@ -286,5 +285,21 @@ public class LoopPractice {
 		
 		
 	}
+	
+	public void practice20() {
+		System.out.print("정수 입력: ");
+        int n = sc.nextInt();
+        
+        // 상향식과 하향식을 함께 출력
+        for (int i = 1; i <= 2 * n - 1; i++) {
+            int starsInLine = i <= n ? i : 2 * n - i;
+            for (int j = 1; j <= starsInLine; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+		
+	}
+	
 	
 }
