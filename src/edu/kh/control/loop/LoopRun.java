@@ -6,7 +6,11 @@ public class LoopRun {
 		
 		ForExample forEx = new ForExample();
 		
-		forEx.ex15();
+		// forEx.ex25();
+		
+		WhileExample whileEx= new WhileExample();
+		
+		whileEx.ex1();
 		
 		
 	}

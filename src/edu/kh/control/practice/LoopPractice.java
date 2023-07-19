@@ -88,4 +88,203 @@ public class LoopPractice {
 		
 	}
 	
+	public void practice6() {
+		System.out.print("숫자 : ");
+		int num = sc.nextInt();
+		
+		if (num > 2 && num <= 9) {
+			for (int x = num; x <=9; x++) {
+				System.out.printf("====== %d단 ======\n", x);
+				for (int y = 1; y <= 9; y++) {
+					int xy = x * y;
+					System.out.printf("%d X %d = %d\n", x, y, xy);
+				}
+			}
+			
+		} else {
+			System.out.println("2~9 사이 숫자만 입력해주세요.");
+		}
+	}
+	
+	public void practice7() {
+		System.out.print("정수 입력 : ");
+		int num = sc.nextInt();
+		
+		for (int i = 1; i <= num; i++) {
+
+			for (int y = 1; y <= i; y++) {
+			
+				System.out.print("*");
+				
+			}
+			
+			
+			System.out.println();	
+		}
+		
+	}
+	
+	
+	public void practice8() {
+		System.out.print("정수 입력 : ");
+		int num = sc.nextInt();
+		
+		for (int i = num; i >= 1; i--) {
+
+			for (int y = i; y >=1; y--) {
+			
+				System.out.print("*");
+				
+			}
+			
+			
+			System.out.println();
+		}
+		
+		
+	}
+	
+	public void practice9() {
+		
+		System.out.print("정수 입력 : ");
+		int num = sc.nextInt();
+		int num2 = num -1;
+		
+		for (int i = 1; i <= num; i++) {
+			
+			for (int y = 1; y <= num2 ; y++) {
+				System.out.print(" ");
+				
+			}
+			
+			for (int x = 1; x <= i; x++) {
+				System.out.print("*");
+			}
+				
+			num2--;
+			
+			System.out.println();	
+		}
+		
+		
+	}
+	
+	public void practice10() {
+		
+		System.out.print("정수 입력 : ");
+		int num = sc.nextInt();
+		
+		for (int i = 1; i <= num; i++) {
+
+			for (int y = 1; y <= i; y++) {
+			
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+
+		for (int j = num -1; j >= 0 ; j--) {
+			
+			for (int x = j; x >= 1; x--) {
+				
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+		
+	}
+	
+	public void practice11() {
+		
+		System.out.print("정수 입력 : ");
+		
+		int num = sc.nextInt();
+		int num2 = num - 1;
+		int num3 = num * 2 - 1;
+		
+		for (int i = 1; i <= num; i++) {
+			
+			for (int x = 1; x <= num2; x++) {
+				
+				System.out.print(" ");
+				
+				
+			}
+			
+			for (int y = 1; y <= i * 2 - 1; y++) {
+				
+				System.out.print("*");
+				
+			}
+			num2--;
+			System.out.println();
+			
+		}
+		
+		
+	}
+	
+	
+	public void practice12() {
+		
+		System.out.print("정수 입력 : ");
+		int num = sc.nextInt();
+		
+		
+		for (int i = 1; i <= num; i++) {
+			if ( i == 1 || i == num) {
+				for (int y =1; y <=num; y++) {					
+					System.out.print("*");
+				}
+				
+			} else {
+				System.out.print("*");
+				for (int x = 1; x <= num-2; x++) {
+					System.out.print(" ");
+				}
+				System.out.print("*");
+			}
+			
+			System.out.println();
+			
+		}
+			
+			
+			
+		
+		
+	
+	}
+	
+	public void practice13() {
+		System.out.print("자연수 하나를 입력하세요 : ");
+		int input = sc.nextInt();
+		System.out.println();
+		
+		int count = 0;
+		
+		int num;
+		
+		
+		for (int i = 1; i <= input; i++) {
+			
+			if (i %2 == 0 || i %3 == 0) {
+				
+				System.out.print(i + " ");
+				
+			}
+			if (i %2 == 0 && i %3 == 0) {
+				count++;
+			}
+			
+		} 
+		System.out.println();
+		System.out.println();
+		System.out.println("conunt : " + count);
+		
+		
+		
+	}
+	
 }
