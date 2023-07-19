@@ -287,6 +287,9 @@ public class LoopPractice {
 	}
 	
 	public void practice20() {
+		
+		// practice11의 변형
+		
 		System.out.print("정수 입력: ");
         int n = sc.nextInt();
         
